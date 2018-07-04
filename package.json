@@ -6,10 +6,12 @@
   "author": "Chamil Udayanga <chamiludayanga28@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "parcel ./client/index.html"
+    "start": "parcel ./client/index.html",
+    "build:prod": "parcel build ./client/index.html"
   },
   "dependencies": {},
   "devDependencies": {
-    "parcel-bundler": "^1.9.4"
+    "parcel-bundler": "^1.9.4",
+    "parcel-plugin-clean-dist": "^0.0.6"
   }
 }
