@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 class App extends Component {
   render() {
-    return <h1>This is working fine.</h1>;
+    return <h1 style={{ textAlign: "center" }}>This is working fine.</h1>;
   }
 }
 
