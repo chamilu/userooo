@@ -1,0 +1,15 @@
+{
+  "name": "userooo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/chamilu/userooo.git",
+  "author": "Chamil Udayanga <chamiludayanga28@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel ./client/index.html"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.9.4"
+  }
+}
