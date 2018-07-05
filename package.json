@@ -10,6 +10,7 @@
     "build:prod": "parcel build ./client/index.html"
   },
   "dependencies": {
+    "fastify": "^1.7.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
   },
