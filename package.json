@@ -7,10 +7,16 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel ./client/index.html",
-    "build:prod": "parcel build ./client/index.html"
+    "build:prod": "parcel build ./client/index.html",
+    "db:init": "node ./scripts/db/init",
+    "db:populate": "node ./scripts/db/populate"
   },
   "dependencies": {
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
     "fastify": "^1.7.0",
+    "fastify-mongodb": "^0.7.1",
+    "mongodb": "^3.1.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
   },
