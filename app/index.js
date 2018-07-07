@@ -1,10 +1,6 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-class App extends Component {
-  render() {
-    return <h1 style={{ textAlign: "center" }}>This is working fine.</h1>;
-  }
-}
+import App from './components/App';
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById('app'));
