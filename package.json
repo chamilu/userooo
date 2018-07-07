@@ -9,11 +9,14 @@
     "start": "parcel ./client/index.html",
     "build:prod": "parcel build ./client/index.html",
     "db:init": "node ./scripts/db/init",
-    "db:populate": "node ./scripts/db/populate"
+    "db:populate": "node ./scripts/db/populate",
+    "db": "yarn db:init && yarn db:populate"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.4",
     "dotenv": "^6.0.0",
+    "faker": "^4.1.0",
     "fastify": "^1.7.0",
     "fastify-mongodb": "^0.7.1",
     "mongodb": "^3.1.0",
