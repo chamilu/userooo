@@ -6,8 +6,8 @@
   "author": "Chamil Udayanga <chamiludayanga28@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "parcel ./client/index.html",
-    "build:prod": "parcel build ./client/index.html",
+    "start": "parcel ./app/index.html",
+    "build:prod": "parcel build ./app/index.html",
     "db:init": "node ./scripts/db/init",
     "db:populate": "node ./scripts/db/populate",
     "db": "yarn db:init && yarn db:populate"
