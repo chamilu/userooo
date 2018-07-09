@@ -6,7 +6,7 @@
   "author": "Chamil Udayanga <chamiludayanga28@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "yarn build:prod && node ./server",
+    "start": "node ./server",
     "serve": "node ./server",
     "dev": "yarn build:prod && nodemon ./server",
     "build:prod": "parcel build ./app/index.html",
