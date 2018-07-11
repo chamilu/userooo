@@ -9,6 +9,7 @@
     "start": "yarn build && cross-env NODE_ENV=production node ./server.js",
     "dev": "cross-env NODE_ENV=development node ./server.js",
     "build": "parcel build ./app/index.html",
+    "serve": "parcel ./app/index.html",
     "db:init": "node ./scripts/db/init",
     "db:populate": "node ./scripts/db/populate",
     "db": "yarn db:init && yarn db:populate"
@@ -17,6 +18,7 @@
     "axios": "^0.18.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.4",
+    "cross-env": "^5.2.0",
     "dotenv": "^6.0.0",
     "faker": "^4.1.0",
     "fastify": "^1.7.0",
@@ -27,7 +29,8 @@
     "parcel-bundler": "^1.9.4",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "cross-env": "^5.2.0"
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
   },
   "devDependencies": {
     "node-sass": "^4.9.0",
