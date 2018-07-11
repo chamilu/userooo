@@ -27,7 +27,8 @@ fastify.get('/api/users', async (request, reply) => {
   reply.type('application/json').send(users);
 });
 
-fastify.listen(port, err => {
+// https://github.com/fastify/fastify/issues/709
+fastify.listen(port, '0.0.0.0', err => {
   if (err) {
     fastify.log.error(err);
     process.exit(1);
