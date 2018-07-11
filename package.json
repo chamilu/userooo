@@ -1,12 +1,12 @@
 {
   "name": "userooo",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "https://github.com/chamilu/userooo.git",
   "author": "Chamil Udayanga <chamiludayanga28@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "yarn build:prod && node ./server.js",
+    "start": "yarn build:prod && node server.js",
     "serve": "node ./server",
     "dev": "yarn build:prod && nodemon ./server",
     "build:prod": "parcel build ./app/index.html",
