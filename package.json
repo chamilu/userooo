@@ -6,10 +6,9 @@
   "author": "Chamil Udayanga <chamiludayanga28@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "yarn build:prod && node server.js",
-    "serve": "node ./server",
-    "dev": "yarn build:prod && nodemon ./server",
-    "build:prod": "parcel build ./app/index.html",
+    "start": "yarn build && cross-env NODE_ENV=production node ./server.js",
+    "dev": "cross-env NODE_ENV=development node ./server.js",
+    "build": "parcel build ./app/index.html",
     "db:init": "node ./scripts/db/init",
     "db:populate": "node ./scripts/db/populate",
     "db": "yarn db:init && yarn db:populate"
@@ -23,12 +22,14 @@
     "fastify": "^1.7.0",
     "fastify-mongodb": "^0.7.1",
     "fastify-static": "^0.12.0",
+    "middie": "^3.1.0",
     "mongodb": "^3.1.0",
+    "parcel-bundler": "^1.9.4",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "parcel-bundler": "^1.9.4"
+    "react-dom": "^16.4.1"
   },
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "node-sass": "^4.9.0",
     "nodemon": "^1.17.5",
     "parcel-plugin-clean-dist": "^0.0.6"

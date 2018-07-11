@@ -4,6 +4,16 @@ const path = require('path');
 const cors = require('cors');
 const { getConnectUrl } = require('./utils/db');
 
+if (process.env.NODE_ENV !== 'production') {
+  const Middie = require('middie');
+  const Bundler = require('parcel-bundler');
+
+  const file = path.resolve(__dirname, './app/index.html');
+  const bundler = new Bundler(file, {});
+  const middie = Middie();
+  middie.use(bundler.middleware());
+}
+
 const { COLLECTION_USERS } = require('./constants');
 const port = process.env.PORT || 3000;
 
