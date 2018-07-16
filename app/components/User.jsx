@@ -25,7 +25,7 @@ export default class User extends Component {
     const { user, handleSelectUser } = this.props;
 
     return (
-      <UserDiv onClick={handleSelectUser}>
+      <UserDiv onClick={() => handleSelectUser(user)}>
         <NameDiv>{`${user.firstName} ${user.lastName}`}</NameDiv>
       </UserDiv>
     );

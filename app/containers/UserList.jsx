@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import User from '../components/User';
-import { getAllUsers } from '../actions/userAction';
+import { getAllUsers, selectUser } from '../actions/userAction';
 
 class UserList extends Component {
   componentDidMount() {
@@ -10,7 +10,9 @@ class UserList extends Component {
 
   renderUsers() {
     const { users, handleSelectUser } = this.props;
-    return users.map(user => <User key={user._id} user={user} />);
+    return users.map(user => (
+      <User key={user._id} user={user} handleSelectUser={handleSelectUser} />
+    ));
   }
 
   render() {
@@ -26,8 +28,11 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    handleGetAllUsers: user => {
+    handleGetAllUsers: () => {
       dispatch(getAllUsers());
+    },
+    handleSelectUser: user => {
+      dispatch(selectUser(user));
     },
   };
 };
