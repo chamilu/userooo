@@ -3,17 +3,16 @@ import styled from 'styled-components';
 
 const UserDiv = styled.div`
   float: left;
-  border: 1px solid #c1c1c1;
-  padding: 6px;
+  padding: 8px 15px;
   margin: 0 20px 20px 0;
   cursor: pointer;
-  background-color: #eee;
-  color: #666;
-  transition: 0.3s all ease-out
+  border-radius: 15px;
+  background-color: #34495e;
+  color: #fff;
+  -webkit-transition: 0.3s all ease-out;
+  transition: 0.3s all ease-out;
   &:hover {
-    background-color: #ccc;
-    border: 1px solid #aaa;
-    color: #fff;
+    background-color: #95a5a6;
   }
 `;
 
