@@ -23,10 +23,10 @@ const NameDiv = styled.div`
 
 export default class User extends Component {
   render() {
-    const { user } = this.props;
+    const { user, handleSelectUser } = this.props;
 
     return (
-      <UserDiv>
+      <UserDiv onClick={handleSelectUser}>
         <NameDiv>{`${user.firstName} ${user.lastName}`}</NameDiv>
       </UserDiv>
     );

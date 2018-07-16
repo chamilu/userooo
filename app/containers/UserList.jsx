@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { connect } from 'react-redux';
 import User from '../components/User';
+import { getAllUsers } from '../actions/userAction';
 
 class UserList extends Component {
-  getUsers() {
-    return axios.get('/api/users');
-  }
-
   componentDidMount() {
-    this.getUsers()
-      .then(data => {
-        console.log(data);
-      })
-      .catch(console.error);
+    this.props.handleGetAllUsers();
   }
 
   renderUsers() {
-    const { users } = this.props;
+    const { users, handleSelectUser } = this.props;
     return users.map(user => <User key={user._id} user={user} />);
   }
 
@@ -32,4 +24,15 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(UserList);
+const mapDispatchToProps = dispatch => {
+  return {
+    handleGetAllUsers: user => {
+      dispatch(getAllUsers());
+    },
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(UserList);
