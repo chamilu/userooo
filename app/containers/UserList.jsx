@@ -14,7 +14,7 @@ class UserList extends Component {
   }
 
   render() {
-    return <div>{this.renderUsers()}</div>;
+    return <div style={{ overflow: 'hidden' }}>{this.renderUsers()}</div>;
   }
 }
 
