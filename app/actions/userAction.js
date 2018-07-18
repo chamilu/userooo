@@ -1,6 +1,11 @@
+import axios from 'axios';
+
 export const getAllUsers = () => {
+  const request = axios.get('/api/users');
+
   return {
     type: 'GELL_ALL_USERS',
+    payload: request,
   };
 };
 
